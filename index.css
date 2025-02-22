@@ -35,11 +35,12 @@ body
 .section
 {
     padding-top: 32pt;
+    margin-bottom: 32pt;
 }
 
 .section.first
 {
-    margin-bottom: 16pt
+    margin-bottom: 32pt
 }
 
 .section .appicon
