@@ -1,32 +1,41 @@
+@keyframes move {
+    100% {
+        background-position-x: -4000px;
+        background-position-y: 7650px;
+    }
+}
+
 body
 {
     scrollbar-gutter: stable both-edges;
     overflow: overlay;
     background-color: #F9F9F9;
+    background-image: url(res/ball_background.png);
+    background-repeat: repeat;
+    background-position-x: center;
+    background-size: 256px;
+    animation: move;
+    animation-duration: 200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .content
 {
+    width: auto;
+    max-width: 1024px;
+    margin-top: 16px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 512px;
     text-align: center;
-    margin-top: 16pt;
-    padding-bottom: 128pt;
 }
 
-@media only screen and (max-width: 600pt) 
+@media only screen and (min-width: 1024px)
 {
     .content
     {
-        width: auto;
-        margin-left: 32pt;
-        margin-right: 32pt;
-    }
-}
-
-@media only screen and (min-width: 600pt) 
-{
-    .content
-    {
-        width: 512pt;
+        
         margin-left: auto;
         margin-right: auto;
     }
@@ -34,30 +43,69 @@ body
 
 .section
 {
-    padding-top: 32pt;
-    margin-bottom: 32pt;
+    margin-top: 128px;
+    margin-bottom: 64px;
 }
 
 .section.first
 {
-    margin-bottom: 32pt
+    margin-top: 128px;
+    margin-bottom: 32px
 }
 
 .section .appicon
 {
-    filter: drop-shadow(5px 5px 10px #444444);
+    filter: drop-shadow(5px 5px 10px black);
+}
+
+.section .applink
+{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin-left: 32px;
+
+    img
+    {
+        width: 100%; 
+        height: auto; 
+        vertical-align: middle; 
+        object-fit: contain;
+    }
+}
+
+.applink_bottom
+{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin-left: 32px;
+
+    img
+    {
+        width: 100%; 
+        height: auto; 
+        vertical-align: middle; 
+        object-fit: contain;
+    }
+}
+
+.section .screenshot
+{
+    max-width: 100%;
 }
 
 h1
 {
-    font-size: 2.4em;
-    margin-bottom: 32pt;
+    font-size: min(10em, 128px);
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 h2
 {
-    font-size: 2em;
-    margin-bottom: 16pt;
+    font-size: min(4em, 80px);
+    margin-bottom: 1em;
 }
 
 h1, h2
@@ -66,14 +114,15 @@ h1, h2
     font-weight: 400;
     font-style: normal;
     color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -4px -4px 2px #000, 4px -4px 2px #000, -4px 4px 2px #000, 4px 4px 2px #000;
+    filter: drop-shadow(5px 5px 10px black);
 }
 
 p
 {
-    font-size: 1.4em;
-    margin-top: 16pt;
-    color: #222222;
+    font-size: 2.4em;
+    margin-top: 2em;
+    color: #111;
 
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
