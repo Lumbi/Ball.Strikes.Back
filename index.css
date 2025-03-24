@@ -20,6 +20,12 @@ body
     animation-iteration-count: infinite;
 }
 
+/* Disable horizontal scroll */
+body, html
+{
+    overflow-x: hidden !important;
+}
+
 .content
 {
     width: auto;
@@ -104,14 +110,14 @@ body
 
 h1
 {
-    font-size: min(5em, 128px);
+    font-size: min(5em, 70px);
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
 h2
 {
-    font-size: min(4em, 80px);
+    font-size: min(4em, 60px);
     margin-bottom: 1em;
 }
 
