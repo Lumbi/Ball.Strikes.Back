@@ -60,10 +60,11 @@ body
 
 .section .applink
 {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-    margin-left: 32px;
+    display: block;
+    width: 256px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
 
     img
     {
@@ -77,9 +78,8 @@ body
 .applink_bottom
 {
     display: inline-block;
-    width: 50%;
+    width: 256px;
     vertical-align: top;
-    margin-left: 32px;
 
     img
     {
@@ -90,21 +90,28 @@ body
     }
 }
 
+.privacy_policy_link
+{
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
 .section .screenshot
 {
-    max-width: 100%;
+    max-width: 300px;
 }
 
 h1
 {
-    font-size: min(10em, 128px);
+    font-size: min(5em, 128px);
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
 h2
 {
-    font-size: min(5em, 80px);
+    font-size: min(4em, 80px);
     margin-bottom: 1em;
 }
 
